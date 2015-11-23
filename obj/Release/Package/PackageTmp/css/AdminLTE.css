@@ -3533,3 +3533,31 @@ fieldset[disabled] .btn-vk.active {
   color: #587ea3;
   background-color: #ffffff;
 }
+.paddingrow10 {
+  padding-left: 15px; 
+}
+.bg-dark {
+    background-color: #EAEAEA;
+}
+.gridstyle {    
+    height:200px;
+    width: 100% 
+}
+.gridstyle2 {    
+    height:150px;
+    /*height:300px;*/
+}
+.header-filtered {
+  color: blue;
+}
+.gridstyle3 {    
+    height:250px;
+}
+.large-Modal .modal-dialog{
+width:70%;
+}
+
+.page-header {
+    margin-top:70px !important;
+}
+.dialog-header-wait { background-color: #428bca; }
