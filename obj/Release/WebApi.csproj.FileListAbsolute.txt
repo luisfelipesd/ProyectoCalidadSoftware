@@ -47,3 +47,7 @@ C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.xml
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.SqlServer.xml

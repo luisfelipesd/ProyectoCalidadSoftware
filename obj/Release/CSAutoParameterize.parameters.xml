@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters />
+<parameters>
+  <parameter name="CalidadDb-Web.config Connection String" description="CalidadDb Connection String used in web.config by the application to access the database." defaultValue="data source=da0aafcqi7.database.windows.net;initial catalog=calidadsoftware;user id=felipe0411;password=Developer0411;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\lusaldana\\Documents\\Visual\ Studio\ 2015\\Projects\\Angular-AdminLTE\\WebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CalidadDb']/@connectionString" />
+  </parameter>
+</parameters>

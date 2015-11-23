@@ -249,11 +249,6 @@ $(function() {
         }
     });
 
-    $.ajax({
-        url: 'api/Values',
-        success: function (data) {
-            alert(data);
-        }
-    });
+  
 
 });
