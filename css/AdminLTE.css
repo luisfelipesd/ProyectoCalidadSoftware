@@ -3561,3 +3561,15 @@ width:70%;
     margin-top:70px !important;
 }
 .dialog-header-wait { background-color: #428bca; }
+
+     .modal-content {
+         width: 600px !important;
+         margin: 60px auto !important;
+         height: auto
+     }
+
+.modal-footer {
+    height:51px;
+}
+   
+

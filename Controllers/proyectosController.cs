@@ -42,6 +42,11 @@ namespace WebApi.Controllers
             return View();
         }
 
+        public ActionResult CreateForm()
+        {
+            return PartialView("Create");
+        }
+
         // POST: proyectos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -53,10 +58,10 @@ namespace WebApi.Controllers
             {
                 db.proyectos.Add(proyectos);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","App");
             }
 
-            return View(proyectos);
+            return RedirectToAction("Index","App");
         }
 
         // GET: proyectos/Edit/5
