@@ -21,12 +21,11 @@
         <!-- Left col -->
         <section class="col-lg-8 col-lg-offset-2 connectedSortable">
 
-            <div class="box-body chat" id="chat-box">
 
                 <p>
-                    @Html.ActionLink("Create New", "Create")
+                    @Html.ActionLink("Create New", "Create","",new {@class="btn btn-primary" })
                 </p>
-                <table class="table">
+                <table class="table table-bordered">
                     <tr>
                         <th>
                             @Html.DisplayNameFor(model => model.nombre)
@@ -67,7 +66,7 @@
                     }
 
                 </table>
-            </div>
+            
         </section>
     </div>
   
