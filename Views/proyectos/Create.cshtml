@@ -62,9 +62,10 @@
     function StartValidation() {
         return $.validator.unobtrusive.parse($('#projectfrm'));
     }
-    function DoneProject() {
+    function DoneProject(response) {
+        debugger;
         $('#modal-container').modal('hide');
-        window.location.assign('/?nuevo=1');
+        window.location.assign('proyectos/Details/' + response);
     }
 </script>
 

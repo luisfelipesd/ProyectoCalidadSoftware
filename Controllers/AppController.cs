@@ -11,8 +11,8 @@ namespace WebApi.Controllers
         // GET: App
         public ActionResult Index(int? nuevo)
         {
-            if (nuevo == 1)
-                ViewBag.nuevo = -1;
+            if (nuevo != null)
+                ViewBag.nuevo = nuevo;
             else
                 ViewBag.nuevo = 0;
                                  

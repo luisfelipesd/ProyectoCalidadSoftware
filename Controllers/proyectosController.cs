@@ -58,10 +58,10 @@ namespace WebApi.Controllers
             {
                 db.proyectos.Add(proyectos);
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index","App");
+                return Json(proyectos.id);
             }
 
-            return RedirectToAction("Index","App");
+            return Json("Not Valid");
         }
 
         // GET: proyectos/Edit/5
