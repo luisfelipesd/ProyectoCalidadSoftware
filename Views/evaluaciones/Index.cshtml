@@ -176,25 +176,27 @@
                         { data: "fecha" },
                     ]
             });
+            $('#proyectos tbody').on('click', 'tr', function () {
+                var table = $('#proyectos').DataTable();
+                var row = table.row(this).data();
+                row.id
+                //if ($(this).hasClass('selected')) {
+                //    $(this).removeClass('selected');
+                //}
+                //else {
+                //    table.$('tr.selected').removeClass('selected');
+                //    $(this).addClass('selected');
+                //}
+
+                //console.log($('tr.selected td:eq(0)').text())
+
+            });
         }
     });
 
 
 
 
-    $('#evaluaciones tbody').on('click', 'tr', function ()
-    {
-        var table = $('#evaluaciones').DataTable();
-        if ($(this).hasClass('selected')) {
-            $(this).removeClass('selected');
-        }
-        else {
-            table.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-
-        console.log($('tr.selected td:eq(0)').text())
-
-    });
+   
 
 </script>
