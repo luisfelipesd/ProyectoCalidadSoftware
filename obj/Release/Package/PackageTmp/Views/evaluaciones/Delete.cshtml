@@ -1,0 +1,80 @@
+﻿@model WebApi.Models.evaluaciones
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>evaluaciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.categorias.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categorias.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proyectos.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proyectos.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.a)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.a)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.c)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resultado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

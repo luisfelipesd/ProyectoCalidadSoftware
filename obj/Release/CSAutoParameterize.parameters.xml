@@ -3,4 +3,13 @@
   <parameter name="CalidadDb-Web.config Connection String" description="CalidadDb Connection String used in web.config by the application to access the database." defaultValue="data source=da0aafcqi7.database.windows.net;initial catalog=calidadsoftware;user id=felipe0411;password=Developer0411;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\lusaldana\\Documents\\Visual\ Studio\ 2015\\Projects\\Angular-AdminLTE\\WebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CalidadDb']/@connectionString" />
   </parameter>
+  <parameter name="NewModel-Web.config Connection String" description="NewModel Connection String used in web.config by the application to access the database." defaultValue="data source=da0aafcqi7.database.windows.net;initial catalog=calidadsoftware;user id=felipe0411;password=Developer0411;multipleactiveresultsets=True;application name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\lusaldana\\Documents\\Visual\ Studio\ 2015\\Projects\\Angular-AdminLTE\\WebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='NewModel']/@connectionString" />
+  </parameter>
+  <parameter name="newevaluaciones-Web.config Connection String" description="newevaluaciones Connection String used in web.config by the application to access the database." defaultValue="data source=da0aafcqi7.database.windows.net;initial catalog=calidadsoftware;user id=felipe0411;password=Developer0411;multipleactiveresultsets=True;application name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\lusaldana\\Documents\\Visual\ Studio\ 2015\\Projects\\Angular-AdminLTE\\WebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='newevaluaciones']/@connectionString" />
+  </parameter>
+  <parameter name="Model-Web.config Connection String" description="Model Connection String used in web.config by the application to access the database." defaultValue="data source=da0aafcqi7.database.windows.net;initial catalog=calidadsoftware;user id=felipe0411;password=Developer0411;multipleactiveresultsets=True;application name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\lusaldana\\Documents\\Visual\ Studio\ 2015\\Projects\\Angular-AdminLTE\\WebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model']/@connectionString" />
+  </parameter>
 </parameters>
