@@ -19,8 +19,8 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -176,6 +176,7 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\categoriasApiController.cs" />
     <Compile Include="Controllers\categoriasController.cs" />
+    <Compile Include="Controllers\evaluacionesController.cs" />
     <Compile Include="Controllers\proyectosApiController.cs" />
     <Compile Include="Controllers\proyectosController.cs" />
     <Compile Include="Controllers\subcategoriasApiController.cs" />
@@ -185,6 +186,7 @@
     </Compile>
     <Compile Include="Models\categorias.cs" />
     <Compile Include="Models\evaluaciones.cs" />
+    <Compile Include="Models\mdEvaluaciones.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\proyectos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -677,6 +679,11 @@
     <Content Include="Views\categorias\Details.cshtml" />
     <Content Include="Views\categorias\Edit.cshtml" />
     <Content Include="Views\categorias\Index.cshtml" />
+    <Content Include="Views\evaluaciones\Create.cshtml" />
+    <Content Include="Views\evaluaciones\Delete.cshtml" />
+    <Content Include="Views\evaluaciones\Details.cshtml" />
+    <Content Include="Views\evaluaciones\Edit.cshtml" />
+    <Content Include="Views\evaluaciones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -701,16 +708,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64036</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64036/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
