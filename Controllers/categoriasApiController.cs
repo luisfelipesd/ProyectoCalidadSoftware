@@ -20,7 +20,7 @@ namespace WebApi.Controllers
         // GET: api/categoriasApi
         public IQueryable<categorias> Getcategorias()
         {
-            return db.categorias;
+            return db.categorias.Where(c => c.id_padre == 0);
         }
 
         // GET: api/categoriasApi/5

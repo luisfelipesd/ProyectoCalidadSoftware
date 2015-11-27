@@ -1,50 +1,112 @@
 ﻿@model WebApi.Models.proyectos
 
 @{
-    ViewBag.Title = "Details";
+	ViewBag.Title = "Details";
 }
+<hr />
 
-<h2>Details</h2>
+<div class="container">
+	<div class=" row">
+		<div class="col-lg-4">
+			<div class="tab-pane">
+				<h4 class="text-bold">PROYECTOS</h4>
+				<hr />
+				<dl class="dl-horizontal">
+					<dt>
+						@Html.DisplayNameFor(model => model.nombre)
+					</dt>
 
-<div>
-    <h4>proyectos</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.nombre)
-        </dt>
+					<dd>
+						@Html.DisplayFor(model => model.nombre)
+					</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.nombre)
-        </dd>
+					<dt>
+						@Html.DisplayNameFor(model => model.descripcion)
+					</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.descripcion)
-        </dt>
+					<dd>
+						@Html.DisplayFor(model => model.descripcion)
+					</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.descripcion)
-        </dd>
+					<dt>
+						@Html.DisplayNameFor(model => model.evaluador)
+					</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.evaluador)
-        </dt>
+					<dd>
+						@Html.DisplayFor(model => model.evaluador)
+					</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.evaluador)
-        </dd>
+					<dt>
+						@Html.DisplayNameFor(model => model.fecha)
+					</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.fecha)
-        </dt>
+					<dd>
+						@Html.DisplayFor(model => model.fecha)
+					</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.fecha)
-        </dd>
+				</dl>
+			</div>
+			<p>
+				@Html.ActionLink("Edit" , "Edit" , new { id = Model.id }) |
+				@Html.ActionLink("Back to List" , "Index")
+			</p>
+		</div>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+		<div class="col-lg-8">
+
+			<div class="tabs-style-2">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active text-bold"><a href="#h2tab1" role="tab" data-toggle="tab"><i class="fa fa-home pr-5"></i> Categorias</a></li>
+					<li><a href="#h2tab2" role="tab" data-toggle="tab"><i class="fa fa-user pr-5"></i> Sub-Categorias</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="h2tab1">
+						<h3 class="title">Seleccione una categoria</h3>
+						<div class="space-bottom"></div>
+						<div class="row">
+							<select id="category" class="form-control">
+
+							</select>
+							</div>
+							<div class="col-md-6">
+
+							</div>
+						</div>
+						<a href="page-services.html" class="btn btn-default">Read more</a>
+					</div>
+					<div class="tab-pane fade" id="h2tab2">
+						<h1 class="text-center title">Top Notch 24/7 Support</h1>
+						<div class="space-bottom"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="list-icons">
+									<li><i class="icon-check pr-10"></i> Lorem ipsum dolor sit amet maiores</li>
+									<li><i class="icon-check pr-10"></i> Consectetur adipisicing elit</li>
+									<li><i class="icon-check pr-10"></i> Aut earum numquam hic placeat</li>
+									<li><i class="icon-check pr-10"></i> Fugiat rem consequatur neque</li>
+									<li><i class="icon-check pr-10"></i> Expedita placeat omnis pariatur</li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo dignissimos amet iusto veniam!</p>
+								<p>Quo expedita tempore modi minima at adipisci saepe excepturi alias consequuntur sunt asperiores enim ut assumenda hic vitae, odio deleniti illo, veniam quas!</p>
+							</div>
+						</div>
+						<a href="page-services.html" class="btn btn-default">Read more</a>
+					</div>
+				</div>
+			</div>
+			<!-- tabs end -->
+
+		</div>
+
+
+	</div>
+
+
+@section jsExtend
+{
+<script src="~/js/projectJs.js"></script>
+}
