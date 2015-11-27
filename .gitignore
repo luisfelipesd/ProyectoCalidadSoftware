@@ -2,3 +2,5 @@
 *.config
 obj/Debug/WebApi.dll
 *.dll
+*.js
+obj/Release/Package/PackageTmp/Views/categorias/Index.cshtml
