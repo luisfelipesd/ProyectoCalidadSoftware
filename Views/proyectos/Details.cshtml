@@ -23,8 +23,7 @@
                 </div>
                 <div class="box-body">
                     <div class="row">
-                        <div class="col-lg-3">
-                          
+                        <div class="col-lg-3">                          
                                 <dl class="dl-horizontal">
                                     <dt>
                                         @Html.DisplayNameFor(model => model.nombre)
@@ -59,11 +58,9 @@
                                     </dd>
 
                                 </dl>
+                                                                                       
+                                @Html.ActionLink("Regresar a Proyectos", "Index", "", new { @class = "btn btn-primary pull-right" })
                             
-                            <p>
-                                @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-primary" }) |
-                                @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-primary" })
-                            </p>
                         </div>
 
                         <div class="col-lg-9">

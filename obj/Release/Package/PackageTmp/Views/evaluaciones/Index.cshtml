@@ -4,81 +4,86 @@
     ViewBag.Title = "INFORME";
 }
 
-@*
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th> @Html.DisplayNameFor(model => model.categorias.nombre)</th>
-        <th>
-            @Html.DisplayNameFor(model => model.proyectos.nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.a)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.b)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.c)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.resultado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.fecha)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.categorias.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.proyectos.nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.a)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.b)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.c)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.resultado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fecha)
-        </td>
-        @<td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
-</table>
-*@
+<br />
 
 <div class="container">
+    <!-- Main row -->
     <div class="row">
-        <div class="col-lg-12">
+        <section class="col-lg-12 connectedSortable">
 
-
-            <h2 class="text-bold label-info text-center">METRICAS</h2>
-            <hr />
-            <div class="">
+            <!-- Map box -->
+            <div class="box box-solid">
                 <div class="box-header">
-                    <h3 class="box-title">Resultados obtenidos</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body no-padding">
-                    <table class="table table-striped">
+                    <!-- tools box -->
+                    <div class="pull-right box-tools">
+                        <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
+                        <button id="projectosbox" class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                    </div><!-- /. tools -->
+
+                    <i class="fa fa-file-powerpoint-o"></i>
+                    <h3 class="box-title">
+                        Proyectos
+                    </h3>
+                </div>
+                <div class="box-body">
+                    <table id="proyectos" class="table table-bordered display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>nombre</th>
+                                <th>descripcion</th>
+                                <th>evaluador</th>
+                                <th>fecha</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div><!-- /.box-body-->
+                <div class="box-footer no-border">
+                    <div class="row">
+                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                            <div id="sparkline-1"></div>
+                            <div class="knob-label">Fallidos</div>
+                        </div><!-- ./col -->
+                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                            <div id="sparkline-2"></div>
+                            <div class="knob-label">Sin Evaluar</div>
+                        </div><!-- ./col -->
+                        <div class="col-xs-4 text-center">
+                            <div id="sparkline-3"></div>
+                            <div class="knob-label">Exitosos</div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+            <!-- /.box -->
+
+
+        </section><!-- /.content -->
+    </div>
+
+
+
+
+    <!-- Main row -->
+    <div class="row">
+        <section class="col-lg-12 connectedSortable">
+
+            <!-- Map box -->
+            <div class="box box-solid">
+                <div class="box-header">
+                    <!-- tools box -->
+                    <div class="pull-right box-tools">
+                        <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
+                        <button id="projectosbox" class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                    </div><!-- /. tools -->
+
+                    <i class="fa fa-file-powerpoint-o"></i>
+                    <h3 class="box-title">
+                        Categorias
+                    </h3>
+                </div>
+                <div class="box-body">
+                    <table id="evaluaciones" class="table table-bordered display" cellspacing="0" width="100%">
                         <tbody>
                             <tr>
                                 <th> @Html.DisplayNameFor(model => model.categorias.nombre):</th>
@@ -114,43 +119,84 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.fecha)
                                     </td>
-                                    @*@<td>
-                                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                                </td>*@
+
                                 </tr>
                             }
                         </tbody>
                     </table>
-                </div><!-- /.box-body -->
+                </div><!-- /.box-body-->
+
             </div>
+            <!-- /.box -->
 
 
+        </section><!-- /.content -->
+    </div>
 
-
-            <div class="col-md-4">
-                <!-- Widget: user widget style 1 -->
-                <div class="box box-widget widget-user-2">
-                    <!-- Add the bg color to the header using any of the bg-* classes -->
-                    <div class="bg-yellow">
-                        <div class="widget-user-image">
-                            <img class="img-circle">
-                        </div><!-- /.widget-user-image -->
-                        <h3 class="widget-user-desc text-center">Functionality metrics</h3>
-                        <br />
-                    </div>
-                    <div class="box-footer no-padding">
-                        <ul class="nav nav-stacked">
-                            <li><a href="#">Projects <span class="pull-right badge bg-blue">31</span></a></li>
-                        </ul>
-                    </div>
-                </div><!-- /.widget-user -->
-            </div>
-
-
-
-
-        </div>
-    </div> 
 </div>
+
+
+<div class="container">
+
+    <div class="box box-widget widget-user-2">
+        <!-- Add the bg color to the header using any of the bg-* classes -->
+        <div class="widget-user-header bg-yellow">
+            <div class="widget-user-image">
+                <img class="img-circle">
+            </div><!-- /.widget-user-image -->
+            <h3 class="widget-user-username"></h3>
+            <br />
+        </div>
+        <div class="box-footer no-padding">
+            <ul class="nav nav-stacked">
+                <li><a href="#">Projects <span class="pull-right badge bg-blue">31</span></a></li>
+                <li><a href="#">Tasks <span class="pull-right badge bg-aqua">5</span></a></li>
+                <li><a href="#">Completed Projects <span class="pull-right badge bg-green">12</span></a></li>
+                <li><a href="#">Followers <span class="pull-right badge bg-red">842</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+        $.ajax({
+        url: '@Url.Action("proyectosApi", "api")',
+        success: function (data) {
+            tableprojectos = $('#proyectos').DataTable({
+                data: data,
+                columns:
+                    [
+                        { data: "id" },
+                        { data: "nombre" },
+                        { data: "descripcion" },
+                        { data: "evaluador" },
+                        { data: "fecha" },
+                    ]
+            });
+            $('#proyectos tbody').on('click', 'tr', function () {
+                var table = $('#proyectos').DataTable();
+                var row = table.row(this).data();
+                row.id
+                //if ($(this).hasClass('selected')) {
+                //    $(this).removeClass('selected');
+                //}
+                //else {
+                //    table.$('tr.selected').removeClass('selected');
+                //    $(this).addClass('selected');
+                //}
+
+                //console.log($('tr.selected td:eq(0)').text())
+
+            });
+        }
+    });
+
+
+
+
+   
+
+</script>

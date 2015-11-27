@@ -18,70 +18,80 @@
     <!-- Main row -->
     <div class="row">
         <section class="col-lg-8 col-lg-offset-2 connectedSortable">
-        
-                <p>
-                    @Html.ActionLink("Create New", "Create", "", new { @class = "btn btn-primary" })
-                </p>
-                <table class="table table-bordered">
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.id_padre)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.nombre)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.descripcion)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.audiencia)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.escala)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.formula)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.orden)
-                        </th>
-                        <th></th>
-                    </tr>
-
-                    @foreach (var item in Model)
+            <div class="box box-primary box-solid">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Métricas</h3>
+                </div>
+                <div class="box-body">
+                    <p>
+                        @Html.ActionLink("Create New", "Create", "", new { @class = "btn btn-primary" })
+                    </p>
+                    <table class="table table-bordered" id="tablecat">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.id_padre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.descripcion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.audiencia)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.escala)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.formula)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.orden)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
             {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.id_padre)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.nombre)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.descripcion)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.audiencia)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.escala)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.formula)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.orden)
-                            </td>
-                            <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                            </td>
-                        </tr>
-                    }
-
-                </table>
-         
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.id_padre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.audiencia)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.escala)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.formula)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.orden)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </div>
 </section>
+<script type="text/javascript">
+    $("#tablecat").dataTable();
+</script>

@@ -74,7 +74,13 @@ namespace WebApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.evaluaciones.Add(evaluaciones);
+                if (db.evaluaciones.Any(c => c.proyectos_id == evaluaciones.proyectos_id && c.categorias_id == evaluaciones.categorias_id))
+                {
+                    var id = db.evaluaciones.Where(x => x.categorias_id == evaluaciones.categorias_id && x.proyectos_id == evaluaciones.proyectos_id).Select(x => x.id).FirstOrDefault();
+                    evaluaciones.id = id;
+                    db.Entry(evaluaciones).State = EntityState.Modified;
+                }else
+                db.evaluaciones.Add(evaluaciones);                                    
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
