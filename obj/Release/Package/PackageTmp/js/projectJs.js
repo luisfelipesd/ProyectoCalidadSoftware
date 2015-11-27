@@ -4,7 +4,7 @@
            var tabid = value.id;
             $("#tabsheader").append('<li><a href="#tab' + tabid + '" role="tab" data-toggle="tab"> <i class="fa fa-user pr-5"> </i> ' + value.nombre + '</a></li>');
             $("#tabcontent").append('<div class="tab-pane fade in" id="tab' + tabid + '"><div class="row"><div class="col-md-12">'
-                + '<div class="panel panel-default"><div class="panel-heading">Seleccione una submétrica para evaluar</div><div class="panel-body">'
+                + '<br/><div class="panel panel-primary"><div class="panel-heading">Seleccione una submétrica para evaluar</div><div class="panel-body">'
                 + '<select class="form-control" id="select' + tabid + '"><option value="0">--Seleccione una Opcion</option></select><br>'
                 + '<table id="table'+tabid+'" class="table table-bordered"><thead><tr><th>id</th><th>Nombre</th><th>Descripcion</th><th>Formula</th><th>Evaluar</th></tr></thead></table>'
                 + '</div></div></div></div></div>');

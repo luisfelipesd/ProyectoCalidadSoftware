@@ -7,77 +7,96 @@
     OnBegin = "StartValidation",
     OnSuccess = "DoneEvaluacion"
 },
-                                                                new { id = "evaluacionfrm" }))
+                                                                                                    new { id = "evaluacionfrm" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Evaluaciones</h4>
+       
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.id)
-            <div class="form-group">
-                @Html.LabelFor(model => model.proyectos_id, "Proyecto", htmlAttributes: new { @class = "control-label col-md-2"})
-                <div class="col-md-10">
-                    @Html.DropDownList("proyectos_id", null, htmlAttributes: new { @class = "form-control" , disabled = "disable" })
-                    @Html.ValidationMessageFor(model => model.proyectos_id, "", new { @class = "text-danger" })
-                </div>
-            </div>
+    <div class="box box-primary box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Evaluaciones</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <br />
+                <div class="col-md-12">
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.categorias_id, "Métrica", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("categorias_id", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.categorias_id, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.id)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.proyectos_id, "Proyecto", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("proyectos_id", null, htmlAttributes: new { @class = "form-control",@readonly=true })
+                            @Html.ValidationMessageFor(model => model.proyectos_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.a, "Variable A", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.a, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.a, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.categorias_id, "Métrica", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("categorias_id", null, htmlAttributes: new { @class = "form-control",@readonly =true })
+                            @Html.ValidationMessageFor(model => model.categorias_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.b, "Variable B", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.b, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.b, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.a, "Variable A", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.a, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.a, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.c, "Variable C", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.c, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.c, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.b, "Variable B", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.b, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.b, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.resultado, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.resultado, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.resultado, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.fecha, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.fecha, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.fecha, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.c, "Variable C", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.c, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.c, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Formula</label>
+                        <div class="col-md-10">
+                            <input type="text" value="@ViewBag.formula" class="form-control" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.resultado, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.resultado, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.resultado, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.fecha, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fecha, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Posee la siguiente documentación?</label>
+                        <div class="col-md-6">
+                            <input type="checkbox" />Documento de Requisitos
+                            <input type="checkbox" />Diagrama de Clase, Actividad y de Despliegue
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Guardar" class="btn btn-primary pull-right" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,6 +104,31 @@
 }
 
 <script>
+    var formula = '@ViewBag.formula';
+    var A = $("#a").val();
+    var B = $("#b").val();
+    var C = $("#c").val();
+    $("#a").on('change', function () {
+        var A = $("#a").val();
+        var B = $("#b").val();
+        var C = $("#c").val();
+        var resultado = eval(formula);
+        $("#resultado").val(resultado);
+    })
+    $("#b").on('change', function () {
+        var A = $("#a").val();
+        var B = $("#b").val();
+        var C = $("#c").val();
+        var resultado = eval(formula);
+        $("#resultado").val(resultado);
+    })
+    $("#c").on('change', function () {
+        var A = $("#a").val();
+        var B = $("#b").val();
+        var C = $("#c").val();
+        var resultado = eval(formula);
+        $("#resultado").val(resultado);
+    })
 
     function StartValidation() {
         return $.validator.unobtrusive.parse($('#evaluacionfrm'));
@@ -92,5 +136,19 @@
     function DoneEvaluacion(response) {
         $('#modal-container').modal('hide');
     }
-
+    $('#a').keypress(function (event) {
+        if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
+    $('#b').keypress(function (event) {
+        if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
+    $('#c').keypress(function (event) {
+        if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+    });
 </script>
