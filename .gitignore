@@ -1,2 +1,7 @@
 .vs/WebApi/v14/.suo
 *.config
+*.dll
+*.config
+bin/WebApi.pdb
+*.csproj
+Views/App/Index.chtml
