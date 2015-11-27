@@ -177,6 +177,7 @@
     <Compile Include="Controllers\categoriasApiController.cs" />
     <Compile Include="Controllers\categoriasController.cs" />
     <Compile Include="Controllers\evaluacionesApiController.cs" />
+    <Compile Include="Controllers\evaluacionesController.cs" />
     <Compile Include="Controllers\proyectosApiController.cs" />
     <Compile Include="Controllers\proyectosController.cs" />
     <Compile Include="Controllers\subcategoriasApiController.cs" />
@@ -678,6 +679,12 @@
     <Content Include="Views\categorias\Details.cshtml" />
     <Content Include="Views\categorias\Edit.cshtml" />
     <Content Include="Views\categorias\Index.cshtml" />
+    <Content Include="Views\evaluaciones\Create.cshtml" />
+    <Content Include="Views\evaluaciones\Delete.cshtml" />
+    <Content Include="Views\evaluaciones\Details.cshtml" />
+    <Content Include="Views\evaluaciones\Edit.cshtml" />
+    <Content Include="Views\evaluaciones\Index.cshtml" />
+    <Content Include="Views\evaluaciones\_Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -23,7 +23,8 @@ namespace WebApi.Controllers
             return db.categorias;
         }
 
-        // GET: api/subcategoriasApi/5       
+        // GET: api/subcategoriasApi/5
+        [ResponseType(typeof(categorias))]
         public IQueryable<categorias> Getcategorias(int id)
         {
             return db.categorias.Where(c => c.id_padre == id);

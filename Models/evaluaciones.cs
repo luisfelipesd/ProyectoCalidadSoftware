@@ -8,18 +8,10 @@ namespace WebApi.Models
 
     public partial class evaluaciones
     {
-        [Key]
-        [Column(Order = 0)]
         public int id { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int proyectos_id { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int categorias_id { get; set; }
 
         [StringLength(45)]

@@ -44,6 +44,26 @@ namespace WebApi.Controllers
             ViewBag.proyectos_id = new SelectList(db.proyectos, "id", "nombre");
             return View();
         }
+        public async Task<ActionResult> CreateForm(int? id, int? proyecto,string formula)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ViewBag.formula = formula;
+            evaluaciones evaluaciones = db.evaluaciones.Where(c => c.proyectos_id == proyecto).Where(c => c.categorias_id == id).FirstOrDefault();                     
+            if (evaluaciones == null)
+            {
+                ViewBag.categorias_id = new SelectList(db.categorias, "id", "nombre",id);
+                ViewBag.proyectos_id = new SelectList(db.proyectos, "id", "nombre",proyecto);                
+                return PartialView("_Create");
+            }
+            else {
+                ViewBag.categorias_id = new SelectList(db.categorias, "id", "nombre", evaluaciones.categorias_id);
+                ViewBag.proyectos_id = new SelectList(db.proyectos, "id", "nombre", evaluaciones.proyectos_id);
+            }
+            return PartialView("_Create", evaluaciones);
+        }
 
         // POST: evaluaciones/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 

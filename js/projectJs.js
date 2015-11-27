@@ -6,7 +6,7 @@
             $("#tabcontent").append('<div class="tab-pane fade in" id="tab' + tabid + '"><div class="row"><div class="col-md-12">'
                 + '<div class="panel panel-default"><div class="panel-heading">Seleccione una submétrica para evaluar</div><div class="panel-body">'
                 + '<select class="form-control" id="select' + tabid + '"><option value="0">--Seleccione una Opcion</option></select><br>'
-                + '<table id="table'+tabid+'" class="table table-bordered"><thead><tr><th>id</th><th>Nombre</th><th>Descripcion</th><th>Audiencia</th><th>Evaluar</th></tr></thead></table>'
+                + '<table id="table'+tabid+'" class="table table-bordered"><thead><tr><th>id</th><th>Nombre</th><th>Descripcion</th><th>Formula</th><th>Evaluar</th></tr></thead></table>'
                 + '</div></div></div></div></div>');
             $.getJSON(location.origin + "/api/subcategoriasApi/" + tabid, null, function (datasub) {
                 datasub.forEach(function (value, index) {
@@ -21,8 +21,8 @@
                             "id": value.id,
                             "nombre": value.nombre,
                             "descripcion": value.descripcion,
-                            "audiencia": value.audiencia,
-                            "evaluar": '<a href="' + location.origin + '/proyectos/CreateForm" class="modal-link btn btn-info">Evaluar</a>'
+                            "formula": value.formula,
+                            "evaluar": '<a href="' + location.origin + '/evaluaciones/CreateForm?id=' + value.id + '&proyecto=' + proyectoid + '&formula='+value.formula+'" class="modal-link btn btn-info">Evaluar</a>'
                         });
                     });
                 });
@@ -34,7 +34,7 @@
                         { data: "id", visible: false },
                         { data: "nombre" },
                         { data: "descripcion" },
-                        { data: "audiencia" },
+                        { data: "formula" },
                         { data: "evaluar" },
                     ]
             });

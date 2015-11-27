@@ -8,7 +8,7 @@ namespace WebApi.Models
     public partial class Model : DbContext
     {
         public Model()
-            : base("name=CalidadDb")
+            : base("name=Model")
         {
         }
 

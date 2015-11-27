@@ -14,9 +14,13 @@ C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\WebApi.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\WebApi.pdb
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Antlr3.Runtime.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Newtonsoft.Json.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Net.Http.Formatting.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Web.Helpers.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Web.Http.dll
@@ -28,7 +32,10 @@ C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Web.WebPages.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Web.WebPages.Razor.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\WebGrease.dll
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.xml
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.SqlServer.xml
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Newtonsoft.Json.xml
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Net.Http.Formatting.xml
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.Web.Helpers.xml
@@ -43,11 +50,3 @@ C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Antlr3.Runtime.pdb
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\obj\Debug\WebApi.dll
 C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\obj\Debug\WebApi.pdb
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.dll
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.SqlServer.dll
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.xml
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\bin\EntityFramework.SqlServer.xml
-C:\Users\lusaldana\Documents\Visual Studio 2015\Projects\Angular-AdminLTE\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
