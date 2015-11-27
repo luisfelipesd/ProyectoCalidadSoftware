@@ -178,6 +178,7 @@
     <Compile Include="Controllers\categoriasController.cs" />
     <Compile Include="Controllers\proyectosApiController.cs" />
     <Compile Include="Controllers\proyectosController.cs" />
+    <Compile Include="Controllers\subcategoriasApiController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -272,6 +273,7 @@
     <Content Include="img\user-bg.png" />
     <Content Include="img\user.jpg" />
     <Content Include="img\user2.jpg" />
+    <Content Include="js\projectJs.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
