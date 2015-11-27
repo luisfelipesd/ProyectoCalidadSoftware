@@ -62,7 +62,7 @@
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.bootstrap.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>	
 </head>
 <body class="skin-blue">
     <!-- header logo: style can be found in header.less -->
@@ -399,6 +399,6 @@
             </div>
         </div>
     </div>
-
+	@RenderSection("jsExtend" , required: false)
 </body>
 </html>

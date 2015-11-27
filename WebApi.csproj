@@ -176,6 +176,7 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\categoriasApiController.cs" />
     <Compile Include="Controllers\categoriasController.cs" />
+    <Compile Include="Controllers\evaluacionesApiController.cs" />
     <Compile Include="Controllers\proyectosApiController.cs" />
     <Compile Include="Controllers\proyectosController.cs" />
     <Compile Include="Controllers\subcategoriasApiController.cs" />

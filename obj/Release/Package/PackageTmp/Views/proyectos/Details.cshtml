@@ -3,48 +3,80 @@
 @{
     ViewBag.Title = "Details";
 }
+<section class="content-header">
+    <h1>
+        Evaluación
+        <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Evaluar Proyecto</li>
+    </ol>
+</section>
+<section class="content">
 
-<h2>Details</h2>
+    <div class=" row">
+        <div class="col-lg-4">
+            <div class="tab-pane">
+                <h4 class="text-bold">Detalles Del proyecto</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.nombre)
+                    </dt>
 
-<div>
-    <h4>proyectos</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.nombre)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.nombre)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.nombre)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.descripcion)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.descripcion)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.descripcion)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.descripcion)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.evaluador)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.evaluador)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.evaluador)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.evaluador)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.fecha)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.fecha)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.fecha)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.fecha)
-        </dd>
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class="btn btn-primary"}) |
+                @Html.ActionLink("Back to List", "Index","",new { @class="btn btn-primary"})
+            </p>
+        </div>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        <div class="col-lg-8">
+
+            <div class="tabs-style-2">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist" id="tabsheader"></ul>
+                <!-- Tab panes -->
+                <div class="tab-content" id="tabcontent">
+
+                </div>
+            </div>
+        </div>
+        <!-- tabs end -->
+
+    </div>
+</section>
+@section jsExtend
+{
+    <script src="~/js/projectJs.js"></script>
+}
